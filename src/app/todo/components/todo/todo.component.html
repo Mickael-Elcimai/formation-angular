@@ -1,0 +1,26 @@
+<div class="row justify-content-between">
+  <div class="col-5">
+    <input type="text" class="form-control mb-2" placeholder="Name" [(ngModel)]="todo.name">
+    <input type="text" class="form-control mb-2" placeholder="Content" [(ngModel)]="todo.content">
+    <button [disabled]="!todo.name.trim().length || !todo.content.trim().length" class="btn btn-primary"
+            (click)="ngAdd()">Add
+    </button>
+  </div>
+
+  <div class="col-3">
+    <ul class="list-group">
+      <li class="list-group-item" [ngClass]="{'list-group-item-info': isOdd, 'active' : isLast}"
+          *ngFor="let todo of allTodos; let isOdd = odd;let idx = index; let isLast = last">
+        <div class="d-flex flex-row">
+          <div style="margin-left: 15px">
+            {{todo?.name}} : {{todo?.content}}
+          </div>
+          <div style="margin-left: 15px">
+            <button
+              class="btn btn-danger" (click)="ngRemove(todo)"><i class="far fa-trash-alt"></i></button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

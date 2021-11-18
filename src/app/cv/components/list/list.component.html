@@ -1,0 +1,9 @@
+<ul class="list-group" *ngIf="allCvs.length">
+  <li class="list-group-item" [ngClass]="{'list-group-item-info': isOdd, 'active' : idx == dataFromSon?.id}"
+      *ngFor="let curCv of allCvs; let isOdd = odd;let idx = index;">
+    <app-elem [cv]="curCv"></app-elem>
+  </li>
+</ul>
+<span *ngIf="!allCvs.length">
+  {{waitingMessage}}
+</span>

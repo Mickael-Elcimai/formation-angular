@@ -1,0 +1,15 @@
+<div class="row justify-content-between mb-5">
+  <div class="col-3">
+    <app-list (sendDataToFather)="processDataFromSon($event)"></app-list>
+  </div>
+
+  <div class="col-7">
+    <app-detail [cv]="dataFromSon"></app-detail>
+  </div>
+</div>
+
+<div class="row justify-content-between">
+  <div class="col-7">
+    <app-embauche></app-embauche>
+  </div>
+</div>

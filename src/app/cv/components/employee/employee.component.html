@@ -1,0 +1,13 @@
+<div class="card h-100" [ngClass]="{'border border-primary': isLast}">
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+    {{embaucheService.getRang(cv)}}
+  </span>
+  <img src="assets/images/{{cv?.path | defaultImage}}" style="width: 75px">
+
+  <div class="card-body">
+    <h5 class="card-title">{{cv?.firstname}} {{cv?.name}}</h5>
+    <p class="card-text">{{cv?.age}} ans</p>
+
+    <button class="btn btn-danger float-end" (click)="ngRenvoi(cv)"><i class="fas fa-handshake-slash"></i></button>
+  </div>
+</div>

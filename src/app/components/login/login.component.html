@@ -1,0 +1,11 @@
+<form #myForm="ngForm">
+  <input #email="ngModel" type="text" required class="form-control mb-1" ngModel [ngClass]="{'is-invalid' : email.touched && email.invalid}" name="email"
+         pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?">
+  <div *ngIf="email.touched && email.invalid" class="invalid-feedback">
+    l'email doit etre valide
+  </div>
+
+  <input type="password" required class="form-control mb-1" ngModel name="password" minlength="4">
+
+  <button [disabled]="!myForm.valid" (click)="processForm(myForm)" class="btn btn-primary mb-1">Envoyer</button>
+</form>

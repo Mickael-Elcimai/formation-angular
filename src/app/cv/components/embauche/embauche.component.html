@@ -1,0 +1,6 @@
+<div class="row row-cols-1 row-cols-md-4 g-4" *ngIf="embauches.length">
+  <div class="col"
+       *ngFor="let curCv of embauches; let isOdd = odd;let idx = index; let isLast = last">
+    <app-employee [cv]="curCv" [isLast]="isLast"></app-employee>
+  </div>
+</div>

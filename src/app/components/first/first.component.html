@@ -1,0 +1,24 @@
+<!--
+balise : etats
+events : foncitonnalites
+-->
+
+
+<p [hidden]="isHidden">first works!</p>
+
+{{isHidden}}
+
+{{myVar}}
+
+<button (click)="ngOnClick()" class="btn btn-info">test</button>
+
+<br>
+
+<input (change)="ngOnChange(monInput.value)" type="text" #monInput><br>
+Mon input vaut : {{message}}
+
+<br><br>
+
+<app-second [hidden]="isHidden"></app-second>
+
+

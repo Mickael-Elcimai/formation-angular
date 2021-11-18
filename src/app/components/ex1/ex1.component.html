@@ -1,0 +1,12 @@
+<div class="row" [style.backgroundColor]="couleur">
+Test couleur
+</div>
+<div class="row">
+  <div class="col">
+    <input class="form-control" (change)="ngOnChange(inputEx1.value)" type="text" #inputEx1>
+  </div>
+
+  <div class="col">
+    <button (click)="ngOnChange(defaultC)" class="btn btn-info">efface</button>
+  </div>
+</div>
