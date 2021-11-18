@@ -102,5 +102,8 @@
       }
     }
   },
+  "deploy": {
+    "builder": "angular-cli-ghpages:deploy"
+  },
   "defaultProject": "elcimai"
 }
